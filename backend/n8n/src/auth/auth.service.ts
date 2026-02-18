@@ -1,6 +1,6 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { TokenService } from './token.service';
-import { GoogleUser } from './strategies/google.stategy';
+import { GoogleUser } from './strategies/google.strategy';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
@@ -52,7 +52,7 @@ export class AuthService {
         }
     }
 
-    async login(user: any) {
+    async handleGoogleLogin(user: any) {
         // Generate industry-grade tokens (Access + Refresh)
         return this.tokenService.generateTokens(user.id, user.email);
     }

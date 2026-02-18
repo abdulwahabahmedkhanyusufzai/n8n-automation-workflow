@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { TokenService } from './token.service';
 import { PrismaModule } from 'src/prisma/prisma.module';
-import { GoogleStrategy } from './strategies/google.stategy';
+import { GoogleStrategy } from './strategies/google.strategy';
 
 @Module({
   imports: [
